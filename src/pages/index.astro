@@ -1,6 +1,8 @@
 ---
 import List from '../components/List';
+
 const title: string = 'Astro with Preact';
+const apiUrl = 'http://localhost:3000/data';
 ---
 
 <html lang="en">
@@ -13,6 +15,9 @@ const title: string = 'Astro with Preact';
 	</head>
 	<body>
 		<h1>{title}</h1>
-		<List client:visible/>
+	
+			<List apiUrl={apiUrl} client:visible/>
+	
+		
 	</body>
 </html>

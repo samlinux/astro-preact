@@ -7,13 +7,14 @@ import ListDetail from './ListDetail';
  This is a TypeScript interface that defines the props that ListElement expects. items is an array of data that should be displayed.
  */
 interface ParentComponentProps {
+  apiUrl: string;
   items: Data[];
 }
 
 /**
   This is a functional component that receives items as a prop.
  */
-const ListElement = ({ items }:ParentComponentProps) => {
+const ListElement = ({ apiUrl, items }:ParentComponentProps) => {
 
   /**
    useState: Two state variables are declared, showDetail and selectedItem. showDetail is initialized as null and will later hold the ID of the item that should be displayed in detail. selectedItem is also initialized as null and will later hold the data of the item that should be displayed in detail.
@@ -37,7 +38,7 @@ const ListElement = ({ items }:ParentComponentProps) => {
         // It's responsible for rendering the details of the selected item. 
         // When the back button in ListDetail is clicked, it calls handleShowDetail with null 
         // as the argument, which hides the detail view.
-        <ListDetail item={selectedItem} setShowDetail={handleShowDetail} />
+        <ListDetail apiUrl={apiUrl} item={selectedItem} setShowDetail={handleShowDetail} />
       ) : (
 
         // ListTable: This is a child component that receives items, showDetail, 
