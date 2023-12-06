@@ -1,0 +1,24 @@
+{
+ "data" :[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@doe.at"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "jane@doe.at"
+    },
+    {
+      "id": 3,
+      "name": "Hanna Doe",
+      "email": "hanna@doe.at"
+    },
+    {
+      "id": 4,
+      "name": "Peter Doe",
+      "email": "peter@doe.at"
+    }
+  ]
+}
